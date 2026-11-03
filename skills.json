@@ -1,14 +1,14 @@
 [
   {
     "skillName": "SOLID Principles",
-    "url": "https://raw.githubusercontent.com/alikhancherli/repo/main/solid-reviewer.md"
+    "url": "https://raw.githubusercontent.com/alikhancherli/ai-agent/refs/heads/main/solid-reviewer.md"
   },
   {
     "skillName": "DDD Expert",
-    "url": "https://raw.githubusercontent.com/username/repo/main/ddd-expert.md"
+    "url": "https://raw.githubusercontent.com/alikhancherli/ai-agent/refs/heads/main/ddd-expert.md"
   },
   {
     "skillName": "Clean Coder",
-    "url": "https://raw.githubusercontent.com/username/repo/main/clean-code-expert.md"
+    "url": "https://raw.githubusercontent.com/alikhancherli/ai-agent/refs/heads/main/clean-code-expert.md"
   }
 ]

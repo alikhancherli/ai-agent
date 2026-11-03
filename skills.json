@@ -1,0 +1,14 @@
+[
+  {
+    "skillName": "SOLID Principles",
+    "url": "https://raw.githubusercontent.com/alikhancherli/repo/main/solid-reviewer.md"
+  },
+  {
+    "skillName": "DDD Expert",
+    "url": "https://raw.githubusercontent.com/username/repo/main/ddd-expert.md"
+  },
+  {
+    "skillName": "Clean Coder",
+    "url": "https://raw.githubusercontent.com/username/repo/main/clean-code-expert.md"
+  }
+]

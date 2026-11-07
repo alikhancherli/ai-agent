@@ -10,5 +10,9 @@
   {
     "skillName": "Clean Coder",
     "url": "https://raw.githubusercontent.com/alikhancherli/ai-agent/refs/heads/main/clean-code-expert.md"
+  },
+  {
+    "skillName": "Ef Core Query Normalizer",
+    "url": "https://raw.githubusercontent.com/alikhancherli/ai-agent/refs/heads/main/ef-core-query-normalizer.md"
   }
 ]

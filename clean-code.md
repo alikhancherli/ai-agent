@@ -77,6 +77,8 @@ This file defines mandatory working rules for this repository. Follow these inst
 - Do not narrate the code line by line.
 - Keep comments precise and maintain them when code changes.
 - Avoid TODO comments unless they are actionable, specific, and necessary.
+- Do not analyze the underlying technical logic, performance, or syntax of commented-out code.
+- Strictly flag commented-out code blocks (e.g., lines starting with `//`) as 'Dead Code' and instruct the developer to either remove them entirely or provide a clear rationale for keeping them.
 
 ## Formatting and structure
 
@@ -238,6 +240,7 @@ Actively look for and fix these issues when touching code:
 - negative conditionals that obscure intent
 - ignored tests and insufficient boundary tests
 - functions that require readers to understand an algorithm before they can trust the name
+- dead code, unused abstractions, and commented-out code blocks (flag for removal without analyzing their internal logic)
 
 ## Change Process
 
@@ -295,3 +298,4 @@ When making changes:
 - Do not mix querying with mutation without a strong reason.
 - Do not silently broaden scope beyond the requested task.
 - Do not leave touched code less readable than before.
+- Do not evaluate or optimize the logic of commented-out code under any circumstances.

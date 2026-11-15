@@ -1,3 +1,7 @@
+---
+name: clean-code-reviewer
+description: Reviews code exclusively for clean code practices, focusing on readability, naming conventions, method length, and formatting. Use when the user asks to review code for clean code principles.
+---
 # OBEY Clean Code by Robert C. Martin
 
 This file defines mandatory working rules for this repository. Follow these instructions before making any code, test, refactor, review, or documentation change.
@@ -186,6 +190,7 @@ This file defines mandatory working rules for this repository. Follow these inst
 - Make threaded code pluggable and tunable when its policy or concurrency level may vary.
 - Run concurrency-sensitive tests under varied thread counts, schedules, and platforms where practical.
 - Treat spurious failures as possible concurrency defects until evidence says otherwise.
+- Explicitly mark methods returning `Task` or `Task<T>` with the `async` modifier and await their results internally, unless eliding the `async` keyword is specifically required for performance or proxy-generation reasons and does not swallow exceptions.
 
 ## Refactoring rules
 
@@ -260,7 +265,7 @@ For every non-trivial task:
 - Prefer explicit, boring, maintainable solutions.
 - Prefer standard library and existing project patterns over new dependencies.
 - Do not add a dependency unless it clearly reduces overall complexity.
-- Reuse established project conventions unless they conflict with these rules or the user explicitly asks otherwise.
+- Reuse established project conventions unless they conflict with these rules or the user explicitly overrides them.
 - Keep interfaces small.
 - Keep state transitions obvious.
 - Avoid premature optimization.

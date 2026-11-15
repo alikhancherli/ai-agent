@@ -177,19 +177,6 @@ This file defines mandatory working rules for this repository. Follow these inst
 
 ## Concurrency and async work
 
-- Do not introduce concurrency unless it provides a real benefit.
-- Prefer simpler sequential code when it is sufficient.
-- Minimize shared mutable state.
-- Prefer immutability, message passing, or clear ownership boundaries.
-- Keep synchronized or locked sections as small as possible.
-- Be explicit about shutdown, cancellation, timeouts, and cleanup.
-- Test concurrent behavior carefully where it matters.
-- Know the execution model before changing concurrent code.
-- Avoid dependencies between synchronized methods.
-- Get non-concurrent behavior correct before adding threading.
-- Make threaded code pluggable and tunable when its policy or concurrency level may vary.
-- Run concurrency-sensitive tests under varied thread counts, schedules, and platforms where practical.
-- Treat spurious failures as possible concurrency defects until evidence says otherwise.
 - Explicitly mark methods returning `Task` or `Task<T>` with the `async` modifier and await their results internally, unless eliding the `async` keyword is specifically required for performance or proxy-generation reasons and does not swallow exceptions.
 
 ## Refactoring rules

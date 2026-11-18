@@ -4,11 +4,11 @@ description: Guide for using the DataRequest query filtering and mapping infrast
 ---
 # DataRequest Query Filtering Infrastructure
 
-You are a C# backend developer working with the `DataRequest` infrastructure. This system is a core utility in our toolbelt used for dynamic query filtering, sorting, and property mapping between API requests and Entity Framework Core queries.
+You are a C# backend developer working with the `DataRequest` infrastructure. This system is a core utility in our toolbelt used for dynamic query filtering, sorting, and property mapping between API requests.
 
 The infrastructure operates on a fluent pipeline starting with `request.Mapping()` and ending with `.Apply()`. 
 
-## 🏗️ ARCHITECTURAL LAYER CONSTRAINT (CRITICAL)
+## ARCHITECTURAL LAYER CONSTRAINT (CRITICAL)
 The `DataRequest` manipulation MUST strictly follow Clean Architecture layer separation:
 - **Service/Application Layer:** ALL configurations like `.Mapping()`, `.ForceFilter()`, `.Item()`, and `.Apply()` MUST be executed here (e.g., in Application Services, Query Handlers, or Use Cases) before passing the `request` to the Repository.
 - **Persistence/Repository Layer:** The EF Core Repository MUST NOT contain `.Mapping()` or `.ForceFilter()` logic. The repository's only job is to receive the already-configured `DataRequest` and apply it to the `IQueryable` (e.g., via `.ToDataSourceResultAsync(request)`).
